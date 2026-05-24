@@ -2,12 +2,13 @@ const nameInput = document.getElementById('js-name-input');
 const addBtn = document.getElementById('js-add-btn');
 const listContainer = document.getElementById('js-todo-list');
 
-const toDoArray = [];
+const toDoArray = JSON.parse(localStorage.getItem('todolist')) || [];
 // function to add a task
 function addToDo() {
 	const name = nameInput.value;
 	if (name === '') return; //avoids adding empty tasks
 	toDoArray.push(name);
+	localStorage.setItem('todolist', JSON.stringify(toDoArray));
 	renderToDoList();
 	nameInput.value = '';
 }
@@ -28,3 +29,4 @@ nameInput.addEventListener('keydown', (event) => {
 		addToDo();
 	}
 });
+renderToDoList();
