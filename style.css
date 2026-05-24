@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f4f7f6;
+	color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	padding: 20px; /*gives breathable spacing on tiny mobile screens*/
+}
+/* MOBILE LAYOUT(screens under 600px) */
+/* Outer App COntainer */
+.toDoContainer {
+	background-color: gray;
+	width: 100%;
+	max-width: 500px;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
