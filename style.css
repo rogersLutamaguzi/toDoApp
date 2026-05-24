@@ -75,7 +75,84 @@ body {
 	font-size: 15px;
 	overflow-wrap: anywhere; /*modern way for word-break:break-word*/
 }
-/* RESPONSIVE DESIGN FOR(Media Querries for larger screens) */
+/* css for the Input and save button inline editing management */
+
+/* 
+   Centers content inside the list item vertically.
+   Spreads the text/input to the left and actions/buttons to the right.
+*/
+#js-todo-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+}
+
+/* 
+   Makes the clickable task text take up all available horizontal space.
+   Changes the mouse cursor to a text indicator so users know they can click it.
+*/
+.task-text {
+	flex: 1;
+	cursor: text;
+}
+
+/* 
+   Styles the active edit input box inside the list item.
+   Forces it to stretch, eliminates default thick borders, and gives a clean focus color.
+*/
+.edit-input {
+	flex: 1;
+	padding: 6px 10px;
+	font-size: 15px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	outline: none;
+}
+.edit-input:focus {
+	border-color: #2ecc71; /* Subtle green border to signify "active editing" */
+}
+
+/* 
+   Wraps the list buttons so they line up neatly side-by-side.
+*/
+.todo-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* 
+   Base button styling resets for list-specific action buttons.
+*/
+.delete-btn,
+.save-btn {
+	padding: 6px 12px;
+	font-size: 13px;
+	font-weight: 600;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.delete-btn {
+	background-color: #e74c3c;
+	color: white;
+}
+.delete-btn:hover {
+	background-color: #c0392b;
+}
+
+.save-btn {
+	background-color: #2ecc71;
+	color: white;
+}
+.save-btn:hover {
+	background-color: #27ae60;
+}
+
+(Media Querries for larger screens) */
 /* Desktop and Tablet breakpoint */
 @media (min-width: 600px) {
 	.toDoContainer {
