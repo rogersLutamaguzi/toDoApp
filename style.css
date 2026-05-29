@@ -151,8 +151,33 @@ body {
 .save-btn:hover {
 	background-color: #27ae60;
 }
+/* CSS for the js  Functionality  */
 
-(Media Querries for larger screens) */
+/* 1. Target li to create better space and view  */
+#js-todo-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+/*  style text or edit input box to take up the remaining left space */
+#js-todo-list li span,
+#js-todo-list li input {
+	flex-grow: 1;
+}
+
+/*  buttons inside  rows to be the exact same size */
+#js-todo-list li button {
+	width: 75px; /*  identical width */
+	height: 35px; /*  identical height */
+	font-size: 14px;
+	font-weight: 600;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
 /* Desktop and Tablet breakpoint */
 @media (min-width: 600px) {
 	.toDoContainer {
